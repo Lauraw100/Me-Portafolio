@@ -1,0 +1,334 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+/*  ####### GENERAL ####### */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    font-family: "JetBrains Mono", monospace;
+    line-height: 1.5;
+    font-weight: 400;
+
+    color-scheme: light dark;
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
+}
+
+/* ####### HEADER ####### */
+header { 
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+header h2 {
+    margin-left: 10px;
+}
+header nav{
+    margin-right: 25px;
+}
+nav ul li {
+    display: inline-block; 
+}
+nav ul li:last-child {
+    margin-right: 0; 
+}
+nav ul li a {
+    text-decoration: auto; 
+    padding: 10px 20px; 
+    transition: 0.3s;
+}
+nav ul li a:hover {
+    text-decoration: underline;
+    border-radius: 30px;
+}
+/* Estilos para el contenedor del navbar */
+nav {
+    background-color: rgba(0, 0, 0, 0.85); /* Negro opaco */
+    padding: 15px;
+    position: fixed; /* Fijo en la parte superior */
+    width: 100%; /* Ancho completo */
+    top: 0;
+    z-index: 1000;
+  }
+  
+  /* Estilos para el menú */
+  .menu {
+    list-style: none; /* Quitar los puntos de la lista */
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente */
+    margin: 0;
+    padding: 0;
+  }
+  
+  .menu li {
+    margin: 0 15px; /* Espacio entre elementos */
+  }
+  
+  /* Estilos para los enlaces */
+  .menu li a {
+    color: #ffffff; /* Color de texto blanco */
+    text-decoration: none; /* Quitar el subrayado */
+    font-size: 16px;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s; /* Suavizar el efecto hover */
+  }
+  
+  .menu li a:hover {
+    background-color: white(265, 265, 265, 0.2); /* Fondo blanco semitransparente al pasar el mouse */
+  }
+  
+/* ####### INICIO ####### */
+.titulo {
+    padding-top: 10%;
+    position: relative;
+    width: 80%;
+    margin: 7% auto;
+}
+.titulo .container1{
+    padding: 3% 0;
+    font-size: 130%;
+    backdrop-filter: blur(5px);
+    border-radius: 30px;
+    width: 60%;
+}
+.titulo .container{
+    padding: 3% 0;
+    font-size: 130%;
+    backdrop-filter: blur(5px);
+    border-radius: 30px;
+    width: 60%;
+}
+.titulo .container .text{
+    padding-left: 3%;
+}
+hr{
+    color: black;
+}
+h3{
+    font-size: 200%;
+}
+.about img{
+    display: flex;
+    justify-content: end;
+    width: 30%;
+    margin-bottom: 0%;
+    margin-top: 0%;
+    z-index: 2;
+}
+.about img:hover{
+    filter: drop-shadow(0 0 4em white);
+   }
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    min-width: 320px;
+    min-height: 100vh;
+}
+
+.titulo h1 {
+    font-size: 3.2em;
+    line-height: 1.1;
+}
+.titulo img{
+    position: absolute;
+    top: 10%;
+    right: 4%;
+    border-radius: 50%;
+}
+
+/* #### SOBRE MI #### */
+.about{
+    width: 80%;
+    margin: 7% auto;
+}
+.about .info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+
+.card {
+    position: relative;
+    width: 700px;
+    height: 360px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    box-shadow: 0 0 0 5px #ffffff80;
+    margin-top: 5%;
+}
+.card img {
+    width: 80px;
+}
+.card__content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.card__title {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 700;
+}
+.card__description {
+    margin: 10px 0 0;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.contacto{
+    display: flex;
+    margin-top: 60vh;
+    align-items: center;
+    justify-content: center;
+
+    img:hover{
+        scale: 1.2;
+        transition-duration: 1s;
+        transition-property: all;
+    }
+}
+#github{
+    width: 3vw;
+    filter: drop-shadow(0 0 0.6em rgb(90, 80, 233));
+}
+#gmail{
+    width: 4vw;
+    filter: drop-shadow(0 0 0.6em rgb(231, 244, 245));
+}
+#whatsapp{
+    width: 4vw;
+    filter: drop-shadow(0 0 0.6em rgb(44, 207, 71));
+}
+#linkedin{
+    width: 3vw;
+    box-shadow: drop-shadow(0 0 0.6em rgb(25, 221, 235));
+}
+
+@media (max-width:780px) {
+    .navbar{
+        width: 115vw;
+    }
+    .navbar-links{
+        display: none;
+    }
+
+
+}
+/*////////////////////////////////////*/
+
+
+.skills{
+    display: flex;
+    flex-direction: column;
+    gap: 8vh;
+    flex-wrap: wrap;
+    perspective: 1000px;
+    img{
+        width: 8vw;
+        height: 8vw;
+    }
+    #python{
+        width: 8vw;
+        height: 8vw;
+        margin-right: 3vw;
+        margin-left: 2vw;
+    }
+    #html{
+        width: 8vw;
+        height: 8vw;
+    }
+    #css{
+        width: 13.5vw;
+        height: 8vw;
+    }
+    #javascript{
+        width: 13vw;
+        height: 8vw;
+    }
+    #react{
+        width: 6vw;
+        height: 7vw;
+        margin: 0 0 0 2vw;
+    }
+    #java{
+        width: 13vw;
+        height: 8vw;
+    }
+    #spring{
+        width: 13vw;
+        height: 7vw;
+    }
+    
+    #mysql{
+        margin: 0 2vw;
+    }
+    filter: drop-shadow(0 0 1em rgb(90, 80, 233));
+
+
+}
+
+.card1 {
+    width: 20%;
+    height: 150px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.2s ease-in-out; 
+}
+
+.card1:hover {
+    transform: rotateY(180deg);
+}
+
+.skill-row{
+    display: flex;
+    justify-content: center;
+    gap: 3px;
+}
+
+.skill {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    transition: all 0.4s ease-in-out; 
+}
+
+.texto {
+    color: white;
+    transform: rotateY(180deg); 
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+    font-size: 1vw;
+    background-color: rgba(6, 6, 7, 0.377);
+}
+
