@@ -1,127 +1,62 @@
 /* #### ANIMACION DEGRADADO FONDO #### */
 @keyframes hero-gradient-animation {
-    0% {
-        --y-0: 98%;
-        --c-0: hsla(55, 0%, 100%, 0.86);
-        --s-start-0: 2%;
-        --s-end-0: 78.72573401919361%;
-        --x-0: 98%;
-    }
-    
-    100% {
-        --y-0: 98%;
-        --c-0: hsla(0, 0%, 100%, 0.86);
-        --s-start-0: 2%;
-        --s-end-0: 78.72573401919361%;
-        --x-0: 2%;
-    }
-    }
-    @property --y-0 {
-    syntax: '<percentage>';
-    inherits: false;
-    initial-value: 98%
-    }
-    @property --c-0 {
-    syntax: '<color>';
-    inherits: false;
-    initial-value: hsla(55, 0%, 100%, 0.86)
-    }
-    @property --s-start-0 {
-    syntax: '<percentage>';
-    inherits: false;
-    initial-value: 2%
-    }
-    @property --s-end-0 {
-    syntax: '<percentage>';
-    inherits: false;
-    initial-value: 78.72573401919361%
-    }
-    @property --x-0 {
-    syntax: '<percentage>';
-    inherits: false;
-    initial-value: 98%
-    }
-    @property --x-1 {
-    syntax: '<percentage>';
-    inherits: false;
-    initial-value: 98%
-    }
-    @property --s-start-1 {
-    syntax: '<percentage>';
-    inherits: false;
-    initial-value: 2%
-    }
-    @property --s-end-1 {
-    syntax: '<percentage>';
-    inherits: false;
-    initial-value: 78.72573401919361%
-    }
-    @property --y-1 {
-    syntax: '<percentage>';
-    inherits: false;
-    initial-value: 91%
-    }
-    @property --c-1 {
-    syntax: '<color>';
-    inherits: false;
-    initial-value: hsla(61, 77%, 66%, 0.42)
-    }
-    @property --x-2 {
-    syntax: '<percentage>';
-    inherits: false;
-    initial-value: 16%
-    }
-    @property --y-2 {
-        syntax: '<percentage>';
-        inherits: false;
-        initial-value: 87%
-    }
-    @property --s-start-2 {
-        syntax: '<percentage>';
-        inherits: false;
-        initial-value: 2%;
-    }
-    @property --s-end-2 {
-        syntax: '<percentage>';
-        inherits: false;
-        initial-value: 61.288600779667334%
-    }
-    @property --c-2 {
-        syntax: '<color>';
-        inherits: false;
-        initial-value: hsla(209, 85%, 73%, 0.42)
-    }
-    @property --y-3 {
-        syntax: '<percentage>';
-        inherits: false;
-        initial-value: 79%
-    }
-    @property --x-3 {
-        syntax: '<percentage>';
-        inherits: false;
-        initial-value: 52%
-    }
-    @property --s-start-3 {
-        syntax: '<percentage>';
-        inherits: false;
-        initial-value: 2%
-    }
-    @property --s-end-3 {
-        syntax: '<percentage>';
-        inherits: false;
-        initial-value: 61.288600779667334%
-    }
-    @property --c-3 {
-        syntax: '<color>';
-        inherits: false;
-        initial-value: hsla(287, 85%, 73%, 0.42)
-    }
+  0% {
+      --y: 98%; /* Agrupando --y-0, --y-1, --y-2, --y-3 */
+      --c: hsla(55, 0%, 100%, 0.86); /* Agrupando --c-0, --c-1, --c-2, --c-3 */
+      --s-start: 2%; /* Agrupando --s-start-0, --s-start-1, --s-start-2, --s-start-3 */
+      --s-end: 78.72573401919361%; /* Agrupando --s-end-0, --s-end-1, --s-end-2, --s-end-3 */
+      --x: 98%; /* Agrupando --x-0, --x-1, --x-2, --x-3 */
+  }
+  
+  100% {
+      --y: 98%; /* Mantenido constante */
+      --c: hsla(0, 0%, 100%, 0.86); /* Cambia el color al final */
+      --s-start: 2%; /* Mantenido constante */
+      --s-end: 78.72573401919361%; /* Mantenido constante */
+      --x: 2%; /* Cambia la posición al final */
+  }
+}
+
+/* Definición de propiedades simplificadas */
+@property --y {
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 98%;
+}
+
+@property --c {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: hsla(55, 0%, 100%, 0.86);
+}
+
+@property --s-start {
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 2%;
+}
+
+@property --s-end {
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 78.72573401919361%;
+}
+
+@property --x {
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 98%;
+}
+
+/* Puedes agregar más propiedades según sea necesario o específicas para cada uso, pero intenta mantenerlas al mínimo */
+
     
     
     /* #### ANIMACION ESTRELLAS FONDO #### */
     #fondo {
         position: fixed;
         animation: rotateStars 120s linear infinite;
+        
     }
     #reves {
         position: fixed;
@@ -163,7 +98,8 @@
         top: 0;
         left: 0;
         color: #fff;
-        animation: abomination1 4.2s linear 1;
+        animation: abomination1 2.2s ease-in-out 1;
+        
         animation-fill-mode: forwards;
       }
     
@@ -271,7 +207,7 @@
   }
   
   .card:hover img {
-      opacity: 0.9;
+      opacity: 0;
       transform: scale(1.02);
   }
   
