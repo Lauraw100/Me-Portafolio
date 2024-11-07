@@ -245,6 +245,22 @@ body {
 
 
 }
+.gift {
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;  /* Posición 20px desde el fondo de la pantalla */
+    right: 20px;   /* Posición 20px desde el borde derecho de la pantalla */
+    width: 180px;
+    height: 100px;
+    border-radius: 10px;
+    z-index: 1000;
+   padding-left: 100px;
+  }
+  
+.gift img{
+    height: 65px;
+   
+}
 /*////////////////////////////////////*/
 
 .skills{
