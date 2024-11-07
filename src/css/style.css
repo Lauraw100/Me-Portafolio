@@ -199,8 +199,9 @@ body {
 }
 .card__description {
     margin: 10px 0 0;
-    font-size: 14px;
+    font-size: 13px;
     line-height: 1.4;
+
 }
 
 .contacto{
@@ -246,17 +247,19 @@ body {
 }
 /*////////////////////////////////////*/
 
-
 .skills{
+    width: 85%;
+    height: 45%;
     display: flex;
     flex-direction: column;
-    gap: 8vh;
+    gap: 8vhq1qaw;
     flex-wrap: wrap;
     perspective: 1000px;
     img{
         width: 8vw;
         height: 8vw;
     }
+    
     #python{
         width: 8vw;
         height: 8vw;
@@ -275,11 +278,6 @@ body {
         width: 13vw;
         height: 8vw;
     }
-    #react{
-        width: 6vw;
-        height: 7vw;
-        margin: 0 0 0 2vw;
-    }
     #java{
         width: 13vw;
         height: 8vw;
@@ -291,25 +289,32 @@ body {
     
     #mysql{
         margin: 0 2vw;
+        width: 8vw;
+        height: 8vw;
     }
-    filter: drop-shadow(0 0 1em rgb(90, 80, 233));
+    filter: drop-shadow(0 0 1em rgb(177, 80, 233));
 
 
 }
+.container{
+    filter: drop-shadow(0 0 1em rgb(177, 80, 233));
+}
 
-.card1 {
+.container1{
+    filter: drop-shadow(0 0 1em rgb(177, 80, 233));
+}.card1 {
     width: 20%;
     height: 150px;
     position: relative;
     transform-style: preserve-3d;
-    transition: transform 0.2s ease-in-out; 
+    transition: transform 0.4s ease-in-out;
 }
 
 .card1:hover {
     transform: rotateY(180deg);
 }
 
-.skill-row{
+.skill-row {
     display: flex;
     justify-content: center;
     gap: 3px;
@@ -319,21 +324,40 @@ body {
     position: absolute;
     width: 100%;
     height: 100%;
-    backface-visibility: hidden; 
+    backface-visibility: hidden; /* Oculta la parte posterior */
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 10px;
-    transition: all 0.4s ease-in-out; 
+    transition: all 0.4s ease-in-out;
+}
+
+.imagen {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen ocupe todo el espacio de la carta */
 }
 
 .texto {
     color: white;
-    transform: rotateY(180deg); 
+    transform: rotateY(180deg); /* Rota el texto para que se vea solo después del flip */
     padding: 10px;
     text-align: center;
     border: 1px solid #ddd;
-    font-size: 1vw;
+    font-size: 0.9vw;
     background-color: rgba(6, 6, 7, 0.377);
+    position: absolute;
+    backface-visibility: hidden; /* Asegura que el texto no se vea cuando la carta está volteada */
 }
 
+.card1 .skill .texto {
+    display: none; /* Oculta el texto inicialmente */
+}
+
+.card1:hover .skill .texto {
+    display: flex; /* Muestra el texto solo al hacer hover */
+}
+
+.card1:hover .skill .imagen {
+    display: none; /* Esconde la imagen cuando la carta se voltea */
+}
