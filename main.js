@@ -14,21 +14,21 @@ class ProjectCarousel extends LitElement {
                 title: 'PrestService',
                 description: 'Proyecto java con SpringBoot e implementación de Spring Security, en colaboracion con Mauricio Diaz y Karol Ramirez.',
                 link: 'https://github.com/Karol-Ramirez03/proservicehub.git',
-                img: 'public/prest-removebg-preview.png',
+                img: '/public/prest-removebg-preview.png',
                 id: 'img1'
             },
             {
               title: '¿Cuánto cuesta mi App?',
               description: 'Aplicativo web con Lit, donde los usuarios pueden cotizar creación de páginas web.Colaboración con Mauricio Diaz y Karol Ramirez.',
               link: 'https://github.com/Karol-Ramirez03/costo-app',
-              img: 'public/costoApp.png',
+              img: '/public/costoApp.png',
               id:'img2'
           },
           {
               title: 'Burger Fest',
               description: 'Proyecto HTML y CSS, basado en una interfaz sencilla de una tienda virtual de productos alimenticios.',
               link: 'https://github.com/Lauraw100/WebBurguer',
-              img: 'public/hamburguesa.png',
+              img: '/public/hamburguesa.png',
               id:'img3'
           }
         ];
